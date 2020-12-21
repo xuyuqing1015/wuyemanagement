@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wuye.xyq.model.mapper.INoticeMapper">
+    <resultMap id="noticeMap" type="wuye.xyq.pojo.Notice">
+        <id property="noid" column="noid"/>
+        <result column="notitle" property="notitle"/>
+        <result property="noclassify" column="noclassify"/>
+        <result column="nobegintime" property="nobegintime"/>
+        <result property="noendtime" column="noendtime"/>
+        <result column="nostate" property="nostate"/>
+        <result property="noinputtime" column="noinputtime"/>
+        <result column="nocontent" property="nocontent"/>
+
+    </resultMap>
+    <select id="selectAll" resultMap="noticeMap">
+        select * from notice order by noinputtime desc
+    </select>
+
+</mapper>
