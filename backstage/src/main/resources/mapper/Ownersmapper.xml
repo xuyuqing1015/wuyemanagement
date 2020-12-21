@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wuye.xyq.model.mapper.IOwnersMapper">
+    <resultMap id="resulto" type="wuye.xyq.pojo.Owners">
+        <id property="owid" column="owid"/>
+        <result property="owname" column="owname"/>
+        <result property="owsex" column="owsex"/>
+        <result property="owbirthday" column="owbirthday"/>
+        <result property="ownation" column="ownation"/>
+        <result property="owcetype" column="owcetype"/>
+        <result property="owcenumber" column="owcenumber"/>
+        <result property="owstate" column="owstate"/>
+        <result property="owphone" column="owphone"/>
+        <result property="owpostcode" column="owpostcode"/>
+        <result property="owaddress" column="owaddress"/>
+        <result property="owcontacts" column="owcontacts"/>
+        <result property="owcophone" column="owcophone"/>
+        <result property="owcoaddress" column="owcoaddress"/>
+        <result property="owremarks" column="owremarks"/>
+        <collection property="houses" ofType="wuye.xyq.pojo.Houses">
+            <id column="hoid" property="hoid"/>
+            <result column="honumber" property="honumber"/>
+            <result column="howxdate" property="howxdate"/>
+            <result column="howxmoney" property="howxmoney"/>
+            <result column="howxjstate" property="howxjstate"/>
+            <result column="hostate" property="hostate"/>
+            <result column="horzdate" property="horzdate"/>
+            <association property="troom" javaType="wuye.xyq.pojo.Troom">
+                <id property="rid" column="rid"/>
+                <result property="rbh" column="rbh"/>
+                <result property="rname" column="rname"/>
+                <result property="rnorms" column="rnorms"/>
+                <result property="rtype" column="rtype"/>
+                <association property="tunit" javaType="wuye.xyq.pojo.Tunit">
+                    <id column="tuid" property="tuid"/>
+                    <result column="tubh" property="tubh"/>
+                    <result column="tuname" property="tuname"/>
+                    <result column="tufstart" property="tufstart"/>
+                    <result column="tufend" property="tufend"/>
+                    <result column="turstart" property="turstart"/>
+                    <result column="turend" property="turend"/>
+                    <result column="tustate" property="tustate"/>
+                    <association property="tfloor" javaType="wuye.xyq.pojo.Tfloor">
+                        <id property="tfid" column="tfid"/>
+                        <result property="tfbh" column="tfbh"/>
+                        <result property="tfname" column="tfname"/>
+                        <result property="tfstate" column="tfstate"/>
+                        <association property="tresidence" javaType="wuye.xyq.pojo.Tresidence">
+                            <id column="trid" property="trid"/>
+                            <result column="trbh" property="trbh"/>
+                            <result column="trname" property="trname"/>
+                            <result column="traddress" property="traddress"/>
+                            <result column="trstate" property="trstate"/>
+                        </association>
+                    </association>
+                </association>
+            </association>
+        </collection>
+    </resultMap>
+    <select id="selectAll" resultMap="resulto">
+        select * from owners
+        left join houses h on owners.owid = h.owid
+        left join troom tr on h.rid = tr.rid
+        left join tunit tu on tr.tuid = tu.tuid
+        left join tfloor tf on tu.tfid = tf.tfid
+        left join tresidence t on tf.trid = t.trid
+    </select>
+</mapper>

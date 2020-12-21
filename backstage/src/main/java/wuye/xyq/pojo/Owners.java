@@ -27,6 +27,51 @@ public class Owners {
     private List<Visit> visits;
     private List<Carjc> carjcsByOwid;
 
+    @Override
+    public String toString() {
+        return "Owners{" +
+                "owid=" + owid +
+                ", owname='" + owname + '\'' +
+                ", owsex='" + owsex + '\'' +
+                ", owbirthday=" + owbirthday +
+                ", ownation='" + ownation + '\'' +
+                ", owcetype='" + owcetype + '\'' +
+                ", owcenumber='" + owcenumber + '\'' +
+                ", owstate=" + owstate +
+                ", owphone='" + owphone + '\'' +
+                ", owpostcode='" + owpostcode + '\'' +
+                ", owaddress='" + owaddress + '\'' +
+                ", owcontacts='" + owcontacts + '\'' +
+                ", owcophone='" + owcophone + '\'' +
+                ", owcoaddress='" + owcoaddress + '\'' +
+                ", owremarks='" + owremarks + '\'' +
+                ", cars=" + cars +
+                ", houses=" + houses +
+                ", visits=" + visits +
+                '}';
+    }
+
+    public Owners() {
+    }
+
+    public Owners(Integer owid, String owname, String owsex, Date owbirthday, String ownation, String owcetype, String owcenumber, Integer owstate, String owphone, String owpostcode, String owaddress, String owcontacts, String owcophone, String owcoaddress, String owremarks) {
+        this.owid = owid;
+        this.owname = owname;
+        this.owsex = owsex;
+        this.owbirthday = owbirthday;
+        this.ownation = ownation;
+        this.owcetype = owcetype;
+        this.owcenumber = owcenumber;
+        this.owstate = owstate;
+        this.owphone = owphone;
+        this.owpostcode = owpostcode;
+        this.owaddress = owaddress;
+        this.owcontacts = owcontacts;
+        this.owcophone = owcophone;
+        this.owcoaddress = owcoaddress;
+        this.owremarks = owremarks;
+    }
+
     @Id
     @Column(name = "owid", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -6,7 +6,6 @@ import HelloWorld from '@/components/HelloWorld'
 
 import notice from '@/components/xuyuqing/notice'
 
-
 import index from '@/components/index'
 import Owners from '@/components/gonyandan/Owners'
 import selectresdence from '@/components/Tjj/Selectresdence'
