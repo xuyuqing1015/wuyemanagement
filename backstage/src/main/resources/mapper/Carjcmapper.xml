@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wuye.xyq.model.mapper.ICarjcMapper">
+    <resultMap id="CarjcMap" type="wuye.xyq.pojo.Carjc">
+        <id column="jcid" property="jcid"/>
+        <result column="owid" property="owid"/>
+        <result column="jcjin" property="jcjin"/>
+        <result column="jcchu" property="jcchu"/>
+        <result column="jccarno" property="jccarno"/>
+        <association property="emp" javaType="wuye.xyq.pojo.Emp">
+
+        </association>
+        <association property="tfloor" javaType="wuye.xyq.pojo.Carjc">
+
+        </association>
+    </resultMap>
+</mapper>
