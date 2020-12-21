@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
     <el-container>
       <!--头部-->
       <el-header style="background-color: #42b983;height: 40px">
@@ -52,9 +51,9 @@
                 <i class="fa fa-shield"></i>
                 <span slot="title">安保管理</span>
               </template>
-              <el-menu-item index="4-1">车辆进出</el-menu-item>
-              <el-menu-item index="4-2">执勤管理</el-menu-item>
-              <el-menu-item index="4-3">来访管理</el-menu-item>
+              <el-menu-item index="4-1"><router-link to="/carjc" tag="span">车辆进出</router-link></el-menu-item>
+              <el-menu-item index="4-2"><router-link to="/zhiqin" tag="span">执勤管理</router-link></el-menu-item>
+              <el-menu-item index="4-3"><router-link to="/visit" tag="span">来访管理</router-link></el-menu-item>
             </el-submenu>
             <el-submenu index="5">
               <template slot="title">
@@ -83,9 +82,6 @@
         </el-main>
       </el-container>
     </el-container>
-=======
-    <router-view/>
->>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
   </div>
 </template>
 
@@ -108,7 +104,6 @@ export default {
 }
 </script>
 
-<<<<<<< HEAD
 <style>
   *{
     margin: 0px;
@@ -118,7 +113,4 @@ export default {
     width: 200px;
     min-height: 400px;
   }
-=======
-<style scoped>
->>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
 </style>

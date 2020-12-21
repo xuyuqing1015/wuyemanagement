@@ -8,7 +8,12 @@
         <result column="vtimego" property="vtimego"/>
         <result column="vthing" property="vthing"/>
         <association property="emp" javaType="wuye.xyq.pojo.Emp">
-
+            <id property="empno" column="empno"/>
+            <result column="empname" property="empname"/>
+            <result property="empsex" column="empsex"/>
+            <result column="empphone" property="empphone"/>
+            <result property="empbirth" column="empbirth"/>
+            <result column="empwechat" property="empwechat"/>
         </association>
         <association property="owners" javaType="wuye.xyq.pojo.Owners">
 

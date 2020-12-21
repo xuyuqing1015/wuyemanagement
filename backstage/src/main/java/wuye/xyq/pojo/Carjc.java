@@ -7,18 +7,22 @@ import java.util.Objects;
 @Entity
 public class Carjc {
     private Integer jcid;
-    private Integer owid;
     private Timestamp jcjin;
     private Timestamp jcchu;
     private String jccarno;
     private Tfloor tfloor;
     private Emp emp;
+    private Owners ownersByOwid;
 
     @Id
-    @Column(name = "jcid")
+    @Column(name = "jcid", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getJcid() {
         return jcid;
+    }
+
+    public void setJcid(Integer jcid) {
+        this.jcid = jcid;
     }
 
     public void setJcid(int jcid) {
@@ -26,17 +30,7 @@ public class Carjc {
     }
 
     @Basic
-    @Column(name = "owid")
-    public Integer getOwid() {
-        return owid;
-    }
-
-    public void setOwid(Integer owid) {
-        this.owid = owid;
-    }
-
-    @Basic
-    @Column(name = "jcjin")
+    @Column(name = "jcjin", nullable = true)
     public Timestamp getJcjin() {
         return jcjin;
     }
@@ -46,7 +40,7 @@ public class Carjc {
     }
 
     @Basic
-    @Column(name = "jcchu")
+    @Column(name = "jcchu", nullable = true)
     public Timestamp getJcchu() {
         return jcchu;
     }
@@ -56,7 +50,7 @@ public class Carjc {
     }
 
     @Basic
-    @Column(name = "jccarno")
+    @Column(name = "jccarno", nullable = true, length = 225)
     public String getJccarno() {
         return jccarno;
     }
@@ -71,7 +65,6 @@ public class Carjc {
         if (o == null || getClass() != o.getClass()) return false;
         Carjc carjc = (Carjc) o;
         return jcid == carjc.jcid &&
-                Objects.equals(owid, carjc.owid) &&
                 Objects.equals(jcjin, carjc.jcjin) &&
                 Objects.equals(jcchu, carjc.jcchu) &&
                 Objects.equals(jccarno, carjc.jccarno);
@@ -79,7 +72,7 @@ public class Carjc {
 
     @Override
     public int hashCode() {
-        return Objects.hash(jcid, owid, jcjin, jcchu, jccarno);
+        return Objects.hash(jcid, jcjin, jcchu, jccarno);
     }
 
     @ManyToOne
@@ -100,5 +93,15 @@ public class Carjc {
 
     public void setEmp(Emp emp) {
         this.emp = emp;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "owid", referencedColumnName = "owid")
+    public Owners getOwnersByOwid() {
+        return ownersByOwid;
+    }
+
+    public void setOwnersByOwid(Owners ownersByOwid) {
+        this.ownersByOwid = ownersByOwid;
     }
 }

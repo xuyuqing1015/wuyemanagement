@@ -8,10 +8,18 @@
         <result column="jcchu" property="jcchu"/>
         <result column="jccarno" property="jccarno"/>
         <association property="emp" javaType="wuye.xyq.pojo.Emp">
-
+            <id property="empno" column="empno"/>
+            <result column="empname" property="empname"/>
+            <result property="empsex" column="empsex"/>
+            <result column="empphone" property="empphone"/>
+            <result property="empbirth" column="empbirth"/>
+            <result column="empwechat" property="empwechat"/>
         </association>
-        <association property="tfloor" javaType="wuye.xyq.pojo.Carjc">
+        <association property="tfloor" javaType="wuye.xyq.pojo.Tfloor">
 
         </association>
     </resultMap>
+    <select id="selectall" resultMap="CarjcMap">
+        select * from carjc c inner join emp e on c.empno=e.empno inner join tfloor t on c.tfid=t.tfid
+    </select>
 </mapper>

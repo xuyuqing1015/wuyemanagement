@@ -2,6 +2,9 @@ package wuye.xyq.model.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+import wuye.xyq.pojo.Carjc;
+
+import java.util.List;
 
 /**
  * @program: backstage
@@ -12,5 +15,6 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface ICarjcMapper {
+    List<Carjc> selectall();
 
 }
