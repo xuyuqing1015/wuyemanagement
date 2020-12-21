@@ -1,5 +1,7 @@
 <template>
-
+  <span>
+    首页
+  </span>
 </template>
 
 <script>
@@ -11,3 +13,4 @@
 <style scoped>
 
 </style>
+

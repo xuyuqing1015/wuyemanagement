@@ -13,10 +13,12 @@
       <el-container>
         <el-aside style="height: 625px;width: 65px;">
           <!--导航栏-->
-          <el-menu default-active="1-4-1" class="el-menu-vertical-demo" :collapse="isCollapse" style="height: 624px">
+          <el-menu default-active="1-4-1" class="el-menu-vertical-demo" :collapse="isCollapse" style="height: 624px;text-align: center">
             <el-menu-item index="2">
               <i class="fa fa-institution"></i>
-              <span slot="title">首页</span>
+              <span slot="title">
+                首页
+              </span>
             </el-menu-item>
             <el-submenu index="1">
               <template slot="title">
@@ -32,7 +34,7 @@
                 <i class="el-icon-user"></i>
                 <span slot="title">业主管理</span>
               </template>
-              <el-menu-item index="2-1">业主信息</el-menu-item>
+              <el-menu-item index="2-1"><router-link to="/owners" tag="span">业主信息</router-link></el-menu-item>
               <el-menu-item index="2-2">业主验房</el-menu-item>
               <el-menu-item index="2-3">业主入住</el-menu-item>
               <el-menu-item index="2-4">请修管理</el-menu-item>
@@ -76,7 +78,7 @@
           </el-menu>
         </el-aside>
         <el-main>
-          <router-view/>
+          <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
