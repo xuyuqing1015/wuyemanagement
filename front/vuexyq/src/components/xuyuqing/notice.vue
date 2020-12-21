@@ -5,7 +5,7 @@
 			<el-button><i class="fa fa-cloud-upload" style="margin-right:5px"></i>发布</el-button>
 			<el-button><i class="fa fa-stop-circle" style="margin-right:5px"></i>暂停</el-button>
 		</el-row>
-		
+		              
 		<el-table
 		    ref="multipleTable"
 		    :data="tableData"
