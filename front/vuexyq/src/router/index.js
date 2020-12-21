@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import app from '@/app'
 import index from '@/components/index'
 import Owners from '@/components/gonyandan/Owners'
 
