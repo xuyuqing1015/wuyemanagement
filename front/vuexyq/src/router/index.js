@@ -1,11 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-
 import HelloWorld from '@/components/HelloWorld'
 
 import notice from '@/components/xuyuqing/notice'
-
 import index from '@/components/index'
 import Owners from '@/components/gonyandan/Owners'
 import selectresdence from '@/components/Tjj/Selectresdence'
@@ -14,7 +12,6 @@ import insertresdence from '@/components/Tjj/Insertresdence'
 import Carjc from '@/components/wj/Carjc'
 import Zhiqin from '@/components/wj/Zhiqin'
 import Visit from '@/components/wj/Visit'
-
 
 Vue.use(Router)
 

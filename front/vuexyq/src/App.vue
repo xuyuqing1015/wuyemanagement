@@ -25,7 +25,11 @@
                 <i class="el-icon-office-building"></i>
                 <span slot="title">楼盘管理</span>
               </template>
-              <el-menu-item index="1-1">住宅批量增加</el-menu-item>
+              <el-menu-item index="1-1">
+                <router-link to="/sres" tag="span">
+                  新增住宅
+                </router-link>
+              </el-menu-item>
               <el-menu-item index="1-2">住宅维护</el-menu-item>
               <el-menu-item index="1-3">住宅查询</el-menu-item>
             </el-submenu>
