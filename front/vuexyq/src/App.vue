@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <el-container>
       <!--头部-->
       <el-header style="background-color: #42b983;height: 40px">
@@ -86,6 +87,9 @@
         </el-main>
       </el-container>
     </el-container>
+=======
+    <router-view/>
+>>>>>>> 4eefcc1c386ff0d27ae6424634dd95cd036b966e
   </div>
 </template>
 
