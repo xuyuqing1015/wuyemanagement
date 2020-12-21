@@ -2,12 +2,16 @@
 server:
   port: 6666
 <<<<<<< HEAD
+<<<<<<< HEAD
 spring:
 
 =======
 
 spring:
 >>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
+=======
+spring:
+>>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
   datasource:
     url: jdbc:mysql://118.178.89.86:3306/crm?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai
     password: "!Mysql2020"
@@ -16,9 +20,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     filter: stat
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
+=======
+>>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
   mvc:
 
   jackson:
@@ -32,19 +39,35 @@ mybatis:
   #
   type-aliases-package: wuye.xyq.pojo
 
+<<<<<<< HEAD
 =======
 mybatis:
   #
   type-aliases-package: wuye.xyq.pojo
 >>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
+=======
+#����mybatis
+mybatis:
+  #
+  type-aliases-package: wuye.xyq.pojo
+  #ָ��mybatisӳ���ļ����ڵ�λ��
+>>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
   mapper-locations: classpath*:mapper/*.xml
 
 
 logging:
   level:
+<<<<<<< HEAD
+=======
+    # �ڿ���̨���mybatis��mapper�ӿ�ִ�е�SQL����Լ�Ӱ�������
+>>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
     com:
       model:
         mdao: debug
+<<<<<<< HEAD
+=======
+        # ��ӡJPA������Լ�ÿ�δ��ݵĲ�����Ϣ
+>>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
     org:
       springframework:
         security:

@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
     <el-container>
       <!--头部-->
       <el-header style="background-color: #42b983;height: 40px">
@@ -83,9 +82,6 @@
         </el-main>
       </el-container>
     </el-container>
-=======
-    <router-view/>
->>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
   </div>
 </template>
 
@@ -107,8 +103,6 @@ export default {
   }
 }
 </script>
-
-<<<<<<< HEAD
 <style>
   *{
     margin: 0px;
@@ -118,7 +112,4 @@ export default {
     width: 200px;
     min-height: 400px;
   }
-=======
-<style scoped>
->>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
 </style>
