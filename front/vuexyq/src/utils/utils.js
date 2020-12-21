@@ -3,8 +3,8 @@ import axios from 'axios';
 import qs from 'qs';
 import {Loading,Message,Notification} from 'element-ui'
 
-//统一的跨域前缀
-axios.defaults.baseURL = 'http://localhost:6666/';
+//统一的跨域前缀      
+axios.defaults.baseURL = 'http://localhost:8888/';
 //axios.defaults.timeout = 20000;//5秒
 
 let loading;
