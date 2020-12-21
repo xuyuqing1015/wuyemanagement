@@ -1,6 +1,8 @@
+
 server:
   port: 6666
 spring:
+
   datasource:
     url: jdbc:mysql://118.178.89.86:3306/crm?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai
     password: "!Mysql2020"
@@ -24,20 +26,20 @@ mybatis:
 logging:
   level:
     com:
-      security:
-        - debug
-        - info
-      web: error
+      model:
+        mdao: debug
+    org:
+      springframework:
+        security:
+          - debug
+          - info
+        web: error
       hibernate:
         SQL: debug
         engine:
           QueryParameters: debug
           query:
             HQLQueryPlan: debug
-      model:
-        mdao: debug
-    org:
-      springframework:
         type:
           descriptor:
             sql:

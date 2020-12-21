@@ -9,6 +9,6 @@
         <result column="empphone" property="empphone"/>
         <result property="empbirth" column="empbirth"/>
         <result column="empwechat" property="empwechat"/>
-        
+
     </resultMap>
 </mapper>
