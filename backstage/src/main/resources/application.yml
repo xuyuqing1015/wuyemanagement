@@ -1,73 +1,42 @@
 
 server:
-  port: 6666
-<<<<<<< HEAD
-<<<<<<< HEAD
+  port: 8888
+#yml格式的配置文件
 spring:
-
-=======
-
-spring:
->>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
-=======
-spring:
->>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
+  #配置数据源
   datasource:
-    url: jdbc:mysql://118.178.89.86:3306/crm?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://118.178.89.86:3306/wuye05?useUnicode=true&characterEncoding=UTF-8&useSSL=true&serverTimezone=Asia/Shanghai
     password: "!Mysql2020"
     username: root
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     filter: stat
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
-=======
->>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
+  #配置视图解析器
   mvc:
 
+  #配置时间格式
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
-<<<<<<< HEAD
 
-#����mybatis
+#配置mybatis
 mybatis:
   #
   type-aliases-package: wuye.xyq.pojo
-
-<<<<<<< HEAD
-=======
-mybatis:
-  #
-  type-aliases-package: wuye.xyq.pojo
->>>>>>> 181044efc78b6da1d438b44c682a1441cc6e5418
-=======
-#����mybatis
-mybatis:
-  #
-  type-aliases-package: wuye.xyq.pojo
-  #ָ��mybatisӳ���ļ����ڵ�λ��
->>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
+  #指定mybatis映射文件所在的位置
   mapper-locations: classpath*:mapper/*.xml
+#  basePackage: com.study.model.mdao
 
 
 logging:
   level:
-<<<<<<< HEAD
-=======
-    # �ڿ���̨���mybatis��mapper�ӿ�ִ�е�SQL����Լ�Ӱ�������
->>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
+    # 在控制台输出mybatis的mapper接口执行的SQL语句以及影响的行数
     com:
+      # crmxyq:
       model:
         mdao: debug
-<<<<<<< HEAD
-=======
-        # ��ӡJPA������Լ�ÿ�δ��ݵĲ�����Ϣ
->>>>>>> 767eb262e3072ae3358539d838eb140556c5e6dc
+        # 打印JPA的语句以及每次传递的参数信息
     org:
       springframework:
         security:

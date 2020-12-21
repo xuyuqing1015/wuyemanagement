@@ -5,6 +5,9 @@ import index from '@/components/index'
 import Owners from '@/components/gonyandan/Owners'
 
 import HelloWorld from '@/components/HelloWorld'
+
+import notice from '@/components/xuyuqing/notice'
+
 import selectresdence from '@/components/Tjj/Selectresdence'
 import updateresdence from '@/components/Tjj/Updateresdence'
 import insertresdence from '@/components/Tjj/Insertresdence'
@@ -16,15 +19,15 @@ export default new Router({
     {
       path: '/',
       name: 'index',
-      component: index,
-
+      component: index
     },
     {
       path: '/owners',
       name: 'Owners',
       component: Owners
-			{
-			path:'/HelloWorld'
+	},
+	{
+	  path:'/HelloWorld',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -42,6 +45,13 @@ export default new Router({
       path: '/ires',
       name: 'insertresdence',
       component: insertresdence
-    }
+
+    
+    },
+	{
+		path: '/notice',
+		name: 'notice',
+		component: notice,
+	}
   ]
 })

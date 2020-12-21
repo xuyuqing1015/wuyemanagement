@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 49ea04f3e7324e4af1d0d000747530071f856dc4
     <el-container>
       <!--头部-->
       <el-header style="background-color: #42b983;height: 40px">
@@ -70,7 +74,7 @@
                 <i class="el-icon-message"></i>
                 <span slot="title">行政管理</span>
               </template>
-              <el-menu-item index="5-1">公告管理</el-menu-item>
+              <el-menu-item index="5-1"><router-link to="/notice" tag="span">公告管理</router-link></el-menu-item>
               <el-menu-item index="5-2">规章制度</el-menu-item>
               <el-menu-item index="5-3">意见箱设置</el-menu-item>
               <el-menu-item index="5-4">员工通讯录</el-menu-item>
@@ -82,6 +86,10 @@
         </el-main>
       </el-container>
     </el-container>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 49ea04f3e7324e4af1d0d000747530071f856dc4
   </div>
 </template>
 
@@ -103,7 +111,21 @@ export default {
   }
 }
 </script>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 49ea04f3e7324e4af1d0d000747530071f856dc4
 <style>
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
   *{
     margin: 0px;
     padding: 0px;
