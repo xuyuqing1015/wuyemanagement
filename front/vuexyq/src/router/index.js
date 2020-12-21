@@ -73,6 +73,7 @@ export default new Router({
 			name:'Drill',
 			component:Drill
 		} */
-    
+   
+
   ]
 })

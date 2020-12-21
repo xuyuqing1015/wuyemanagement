@@ -53,6 +53,7 @@
             </el-submenu>
             <el-submenu index="4">
               <template slot="title">
+
                 <i class="fa fa-shield"></i>
                 <span slot="title">安保管理</span>
               </template>
