@@ -13,6 +13,9 @@ public class Notice {
     private Timestamp noendtime;
     private Integer nostate;
     private Timestamp noinputtime;
+    private String nocontent;
+
+
 
     @Id
     @Column(name = "noid")
@@ -85,6 +88,16 @@ public class Notice {
         this.noinputtime = noinputtime;
     }
 
+    @Basic
+    @Column(name = "nocontent")
+    public String getNocontent() {
+        return nocontent;
+    }
+
+    public void setNocontent(String nocontent) {
+        this.nocontent = nocontent;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -96,11 +109,12 @@ public class Notice {
                 Objects.equals(nobegintime, notice.nobegintime) &&
                 Objects.equals(noendtime, notice.noendtime) &&
                 Objects.equals(nostate, notice.nostate) &&
-                Objects.equals(noinputtime, notice.noinputtime);
+                Objects.equals(noinputtime, notice.noinputtime) &&
+                Objects.equals(nocontent,notice.nocontent);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(noid, notitle, noclassify, nobegintime, noendtime, nostate, noinputtime);
+        return Objects.hash(noid, notitle, noclassify, nobegintime, noendtime, nostate, noinputtime,nocontent);
     }
 }
