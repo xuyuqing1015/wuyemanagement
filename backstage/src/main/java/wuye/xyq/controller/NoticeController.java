@@ -24,13 +24,13 @@ public class NoticeController {
     NoticeServices ns;
 
     @RequestMapping("/selectall")
-    public ResultVo selectAll(@RequestParam("current") Integer current,
+    public ResultVo selectAll(@RequestParam("pageno") Integer pageno,
                               @RequestParam(value = "pageSize",required = false) Integer pageSize){
         Integer size =4;
         if(pageSize!=null){
             pageSize=size;
         }
-        PageInfo<Notice> page = ns.selectAll(current, pageSize);
+        PageInfo<Notice> page = ns.selectAll(pageno, pageSize);
         return ResultVo.okAndVO(page);
 
     }

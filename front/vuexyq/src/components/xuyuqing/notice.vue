@@ -36,8 +36,8 @@
 	export default {
 	      data() {
 	        return {
-				current:4,
-				pageSize:1,
+				current:1,
+				pageSize:4,
 				total:0,
 	             tableData: [],
 				multipleSelection: []
@@ -55,7 +55,7 @@
 				 },
 				 getlist(){
 					 let param = {
-						 current:this.current,
+						 pageno:this.current,
 						 pageSize:this.pageSize
 					 };
 					 this.$axios.post('notice1221/selectall',this.$qs.stringify(param))

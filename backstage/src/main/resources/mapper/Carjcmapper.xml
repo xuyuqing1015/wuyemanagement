@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wuye.xyq.model.mapper.ICarjcMapper">
+    <resultMap id="CarjcMap" type="wuye.xyq.pojo.Carjc">
+        <id column="jcid" property="jcid"/>
+        <result column="owid" property="owid"/>
+        <result column="jcjin" property="jcjin"/>
+        <result column="jcchu" property="jcchu"/>
+        <result column="jccarno" property="jccarno"/>
+        <association property="emp" javaType="wuye.xyq.pojo.Emp">
+            <id property="empno" column="empno"/>
+            <result column="empname" property="empname"/>
+            <result property="empsex" column="empsex"/>
+            <result column="empphone" property="empphone"/>
+            <result property="empbirth" column="empbirth"/>
+            <result column="empwechat" property="empwechat"/>
+        </association>
+        <association property="tfloor" javaType="wuye.xyq.pojo.Tfloor">
+
+        </association>
+    </resultMap>
+    <select id="selectall" resultMap="CarjcMap">
+        select * from carjc c inner join emp e on c.empno=e.empno inner join tfloor t on c.tfid=t.tfid
+    </select>
+</mapper>

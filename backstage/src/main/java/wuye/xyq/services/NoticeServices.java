@@ -21,8 +21,8 @@ public class NoticeServices {
     INoticeMapper nomapper;
 
     /*根据录入时间倒序查询所有*/
-    public PageInfo<Notice> selectAll(Integer current,Integer pageSize){
-        PageHelper.startPage(current,pageSize);
+    public PageInfo<Notice> selectAll(Integer pageno,Integer pageSize){
+        PageHelper.startPage(pageno,pageSize);
         List<Notice> list = nomapper.selectAll();
         PageInfo<Notice> page = new PageInfo<>(list);
         return page;

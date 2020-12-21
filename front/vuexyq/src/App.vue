@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
-=======
-
->>>>>>> 49ea04f3e7324e4af1d0d000747530071f856dc4
     <el-container>
       <!--头部-->
       <el-header style="background-color: #42b983;height: 40px">
@@ -55,9 +51,9 @@
                 <i class="fa fa-shield"></i>
                 <span slot="title">安保管理</span>
               </template>
-              <el-menu-item index="4-1">车辆进出</el-menu-item>
-              <el-menu-item index="4-2">执勤管理</el-menu-item>
-              <el-menu-item index="4-3">来访管理</el-menu-item>
+              <el-menu-item index="4-1"><router-link to="/carjc" tag="span">车辆进出</router-link></el-menu-item>
+              <el-menu-item index="4-2"><router-link to="/zhiqin" tag="span">执勤管理</router-link></el-menu-item>
+              <el-menu-item index="4-3"><router-link to="/visit" tag="span">来访管理</router-link></el-menu-item>
             </el-submenu>
             <el-submenu index="5">
               <template slot="title">
@@ -86,10 +82,6 @@
         </el-main>
       </el-container>
     </el-container>
-<<<<<<< HEAD
-=======
-
->>>>>>> 49ea04f3e7324e4af1d0d000747530071f856dc4
   </div>
 </template>
 
@@ -111,11 +103,7 @@ export default {
   }
 }
 </script>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 49ea04f3e7324e4af1d0d000747530071f856dc4
 <style>
 
 #app {

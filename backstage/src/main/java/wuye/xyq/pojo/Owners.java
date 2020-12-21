@@ -25,9 +25,10 @@ public class Owners {
     private List<Car> cars;
     private List<Houses> houses;
     private List<Visit> visits;
+    private List<Carjc> carjcsByOwid;
 
     @Id
-    @Column(name = "owid")
+    @Column(name = "owid", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getOwid() {
         return owid;
@@ -38,7 +39,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owname")
+    @Column(name = "owname", nullable = true, length = 100)
     public String getOwname() {
         return owname;
     }
@@ -48,7 +49,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owsex")
+    @Column(name = "owsex", nullable = true, length = 10)
     public String getOwsex() {
         return owsex;
     }
@@ -58,7 +59,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owbirthday")
+    @Column(name = "owbirthday", nullable = true)
     public Date getOwbirthday() {
         return owbirthday;
     }
@@ -68,7 +69,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "ownation")
+    @Column(name = "ownation", nullable = true, length = 100)
     public String getOwnation() {
         return ownation;
     }
@@ -78,7 +79,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owcetype")
+    @Column(name = "owcetype", nullable = true, length = 100)
     public String getOwcetype() {
         return owcetype;
     }
@@ -88,7 +89,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owcenumber")
+    @Column(name = "owcenumber", nullable = true, length = 200)
     public String getOwcenumber() {
         return owcenumber;
     }
@@ -98,7 +99,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owstate")
+    @Column(name = "owstate", nullable = true)
     public Integer getOwstate() {
         return owstate;
     }
@@ -108,7 +109,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owphone")
+    @Column(name = "owphone", nullable = true, length = 11)
     public String getOwphone() {
         return owphone;
     }
@@ -118,7 +119,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owpostcode")
+    @Column(name = "owpostcode", nullable = true, length = 100)
     public String getOwpostcode() {
         return owpostcode;
     }
@@ -128,7 +129,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owaddress")
+    @Column(name = "owaddress", nullable = true, length = 200)
     public String getOwaddress() {
         return owaddress;
     }
@@ -138,7 +139,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owcontacts")
+    @Column(name = "owcontacts", nullable = true, length = 100)
     public String getOwcontacts() {
         return owcontacts;
     }
@@ -148,7 +149,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owcophone")
+    @Column(name = "owcophone", nullable = true, length = 11)
     public String getOwcophone() {
         return owcophone;
     }
@@ -158,7 +159,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owcoaddress")
+    @Column(name = "owcoaddress", nullable = true, length = 200)
     public String getOwcoaddress() {
         return owcoaddress;
     }
@@ -168,7 +169,7 @@ public class Owners {
     }
 
     @Basic
-    @Column(name = "owremarks")
+    @Column(name = "owremarks", nullable = true, length = 1000)
     public String getOwremarks() {
         return owremarks;
     }
@@ -229,5 +230,14 @@ public class Owners {
 
     public void setVisits(List<Visit> visits) {
         this.visits = visits;
+    }
+
+    @OneToMany(mappedBy = "ownersByOwid")
+    public List<Carjc> getCarjcsByOwid() {
+        return carjcsByOwid;
+    }
+
+    public void setCarjcsByOwid(List<Carjc> carjcsByOwid) {
+        this.carjcsByOwid = carjcsByOwid;
     }
 }
